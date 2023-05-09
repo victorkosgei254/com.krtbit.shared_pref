@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_shape"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/short_desc"
+        android:text="This is a demo application showing shared preferences"
+        android:gravity="center"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50sp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/the_text_label"
+        android:text="Enter something to save"
+        android:layout_marginHorizontal="10sp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/short_desc"
+        android:layout_marginTop="50sp"
+        />
+
+   <EditText
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/the_text"
+       android:hint="The text here.."
+       app:layout_constraintTop_toBottomOf="@id/the_text_label"
+       app:layout_constraintLeft_toLeftOf="@id/the_text_label"
+       android:layout_marginTop="20sp"
+       />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveBtn"
+        android:text="save"
+        app:layout_constraintTop_toBottomOf="@id/the_text"
+        app:layout_constraintLeft_toLeftOf="@id/the_text"
+        app:layout_constraintRight_toRightOf="@id/the_text"
+        android:layout_marginTop="50sp"
+        android:backgroundTint="#4CAF50"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/saved_items"
+        android:text="Saved items"
+        android:textSize="20sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/saveBtn"
+        android:layout_marginTop="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/saveBtn"
+        app:layout_constraintRight_toRightOf="@id/saveBtn"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/saved_text"
+        android:text="null"
+        app:layout_constraintTop_toBottomOf="@id/saved_items"
+        android:layout_marginHorizontal="10sp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
